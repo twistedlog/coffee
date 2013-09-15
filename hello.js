@@ -1,9 +1,10 @@
 (function() {
   var coffee;
 
-  coffee = function() {
+  coffee = function(message) {
     var answer;
-    answer = confirm("Ready for some coffee?");
+    if (message == null) message = "Ready for some coffee";
+    answer = confirm(message);
     return "Your answer is " + answer;
   };
 
